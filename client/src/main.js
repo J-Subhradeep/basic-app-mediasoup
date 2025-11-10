@@ -195,6 +195,7 @@ const consume = async()=>{
         // see MDN on MediaStream for A TON more information
         remoteVideo.srcObject = new MediaStream([track])
         console.log("Track is ready... we need to unpause")
+        consumer.resume()
         await socket.emitWithAck('unpauseConsumer')
     }
 }

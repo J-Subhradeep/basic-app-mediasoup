@@ -1,0 +1,12 @@
+
+
+services:
+  nginx:
+    build: .
+    container_name: nginx-ssl-server
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./certs:/etc/nginx/certs:ro
+    restart: unless-stopped

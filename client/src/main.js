@@ -28,7 +28,7 @@ let consumer = null
 // connect to the server
 const initConnect = () => {
     console.log("Init connect")
-    socket = io('https://172.17.176.1:3030')
+    socket = io('https://122.176.65.55:3030')
     connectButton.innerHTML = "Connecting..."
     connectButton.disabled = true
     // keep the socket listeners in their own place
